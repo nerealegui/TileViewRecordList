@@ -1,0 +1,16 @@
+.tile {
+	border: 1px solid #d4d4d4;
+	border-radius: .25rem;
+	display: block;
+}
+.icon-silhouette {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom:5px;
+	width: 20%;
+}
+
+.title{
+	text-align: center
+}

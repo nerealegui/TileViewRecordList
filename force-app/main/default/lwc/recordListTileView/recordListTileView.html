@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="My Object List" icon-name="standard:employee_asset">
+		<div class="slds-card__body_inner">
+            <template if:true={redenderedObjectList}>
+                <lightning-layout multiple-rows="true" >
+                    <template for:each={redenderedObjectList} for:item="objectItem">
+                        <lightning-layout-item key={objectItem.id} size="6" class="slds-var-p-around_x-small">
+                           <lightning-card variant="Narrow" class="tile">
+                                <div class="slds-var-p-horizontal_small">
+                                   
+                                    <div class="icon-silhouette">
+                                        <img src={objectItem.logo} alt="Object Icon" />
+                                    </div>
+                                    
+                                    
+                                    <div class="slds-text-title_caps title"> 
+                                        <a data-record-id={objectItem.Id} onclick={handleClick}>{objectItem.title}</a>
+                                    </div>
+                                    <div class="title"> 
+                                        <p>{objectItem.subtitle}</p>
+                                    </div>
+                                </div>
+                            </lightning-card>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </template>
+            <template if:true={error}>
+                <div class="slds-text-color_error">
+                    An error occurred while loading the service list, {error}
+                </div>
+            </template>
+		</div>
+	</lightning-card>
+</template>
