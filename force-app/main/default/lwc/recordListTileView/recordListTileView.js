@@ -45,7 +45,7 @@ export default class RecordListTileView extends NavigationMixin( LightningElemen
         type: 'standard__recordPage',
         attributes: {
             recordId :eventRecordId ,
-            objectApiName: this.objectName,
+            objectApiName: this.objectApiName,
             actionName: 'view'
             }
         });
