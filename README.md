@@ -1,46 +1,21 @@
-# Salesforce LWC Tile Menu
+# SalesforceCMSComponentLibrary with Reviewed UI
 
-_Ready to use LWC Component to generate tile menus from Objects_
+_This is a modified version of the SalesforceCMSComponentLibrary provided by SalesforceLabs._
 
+Experience Cloud provides several standard CMS-related components focused on collections and other manually-curated pieces of content. These custom components complement those standard components and allow you to place relevant and dynamically-selected CMS content on topic detail and record detail pages. This can be used to inform customers and partners, drive context-specific calls to action,and to make your users much happier with the digital experience you create.
 
-This tile menu is an example on how a tile menu can be created via a LWC to show a record list in Salesforce. You will be able to: 
+# Modifications on this project
 
+_User friendly layout based on a card view_
 
-- Create a tile menu for **Custom and Standard Objects**
-- Associate a logo or image to each record.
-- Have a ready to use LWC in Lightning pages.
+The CMS content is displayed as cards in a 2 column layout. 
 
-<img width="1437" alt="image" src="https://user-images.githubusercontent.com/17240961/159176147-c47542d7-b19b-45b1-90f6-0321a751b587.png">
+The fields shown in the card have been reduced to only show the key information, the image banner, the tittle and the excerpt - this last one is used to provide a quick summary of the CMS content.
 
+![image](https://user-images.githubusercontent.com/17240961/161980457-ab3f57a4-58a0-4176-a751-03f0e559a57e.png)
 
-You can modify the _recordListTileView.js-meta.xml_ to enable the component in additional pages, the ones by default are the Home Page and Community Pages.
-```
-    <targets>
-        <target>lightningCommunity__Default</target>
-        <target>lightningCommunity__Page</target>
-        <target>lightning__HomePage</target>
-    </targets>
-```
-
-
-## Installation
-
-Before starting make sure Lightning is enabled in your org.
-
-Get the repository
-
-```sh
-git clone https://github.com/nereagit/TileViewRecordList
-```
-
-Deploy the components in your org, for this you should be authenticated with your target org.
-
-```sh
-sfdx auth:web:login --setdefaultdevhubusername --setalias my-hub-org 
-sfdx force:source:deploy --manifest "<project-forder-path>/TileViewRecordList/manifest/package.xml" 
-```
 
 ## Development
 
 Want to contribute? Great!
-Reach out or open a pull request in the project, any contribution is welcome!
+Reach out or open a pull request in the project, any contributions are welcome!
